@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/6b05a0a1ef.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&family=Ultra&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="assets/logos/logo-pizza-removebg-preview.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Menú</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" class="logo">
+        <img
+          src="assets/logos/logo-pizza-removebg-preview.png"
+          class="logo-img"
+        />
+        <h1 class="logo-title">La Napolitana</h1>
+      </a>
+
+      <button class="toggle-btn" id="toggleBtn">
+        <i class="fa-solid fa-bars" id="toggleBars"></i>
+        <i class="fa-solid fa-xmark hidden" id="toggleX"></i>
+      </button>
+
+      <nav class="menu hidden" id="menu">
+        <ul>
+          <li><a href="menu.html">MENÚ</a></li>
+          <li><a href="reservas.html">RESERVAS</a></li>
+          <li><a href="pideenlinea.html">PIDE EN LÍNEA</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section>
+        <h2 class="centered-title">Nuestro menú</h2>
+        <div class="table-container">
+          <table class="menu-table">
+            <tr>
+              <th>Producto</th>
+              <th>Precio (COP)</th>
+            </tr>
+            <tr>
+              <td>Pizza Margarita</td>
+              <td>25,000</td>
+            </tr>
+            <tr>
+              <td>Pizza Hawaiana</td>
+              <td>28,000</td>
+            </tr>
+            <tr>
+              <td>Pizza Pepperoni</td>
+              <td>30,000</td>
+            </tr>
+            <tr>
+              <td>Pizza Vegetariana</td>
+              <td>28,000</td>
+            </tr>
+            <tr>
+              <td>Pizza Cuatro Quesos</td>
+              <td>32,000</td>
+            </tr>
+            <tr>
+              <td>Pizza Carne</td>
+              <td>30,000</td>
+            </tr>
+            <tr>
+              <td>Pizza Pollo BBQ</td>
+              <td>30,000</td>
+            </tr>
+            <tr>
+              <td>Pizza Mexicana</td>
+              <td>32,000</td>
+            </tr>
+            <tr>
+              <td>Lasaña de Carne</td>
+              <td>26,000</td>
+            </tr>
+            <tr>
+              <td>Lasaña de Pollo</td>
+              <td>26,000</td>
+            </tr>
+            <tr>
+              <td>Lasaña de Verduras</td>
+              <td>25,000</td>
+            </tr>
+            <tr>
+              <td>Lasaña de Espinacas</td>
+              <td>26,000</td>
+            </tr>
+            <tr>
+              <td>Spaghetti Bolognesa</td>
+              <td>22,000</td>
+            </tr>
+            <tr>
+              <td>Spaghetti Carbonara</td>
+              <td>23,000</td>
+            </tr>
+            <tr>
+              <td>Penne Alfredo</td>
+              <td>24,000</td>
+            </tr>
+            <tr>
+              <td>Penne Arrabiata</td>
+              <td>23,000</td>
+            </tr>
+            <tr>
+              <td>Fettuccine Primavera</td>
+              <td>25,000</td>
+            </tr>
+            <tr>
+              <td>Bebida Gaseosa (350 ml)</td>
+              <td>4,000</td>
+            </tr>
+            <tr>
+              <td>Bebida Agua Mineral (500 ml)</td>
+              <td>3,000</td>
+            </tr>
+            <tr>
+              <td>Bebida Jugos Naturales</td>
+              <td>5,000</td>
+            </tr>
+          </table>
+        </div>
+
+        <a
+          class="btn"
+          href="./assets/pdf/MENU_NAPOLITANA.pdf"
+          download="MENU_NAPOLITANA.pdf"
+          >Descargar menú</a
+        >
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Derechos reservados &copy; 2023</p>
+
+      <p>Esta página web NO representa a un restaurante y/o empresa real</p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
