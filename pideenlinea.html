@@ -53,42 +53,32 @@
     <main class="main">
       <section>
         <h2 class="centered-title">Pide en línea</h2>
-        <form class="contact-form">
+        <form class="contact-form" id="orderForm">
           <h3>Ingresa tus datos</h3>
           <p>Entrega a Domicilio en Bogotá</p>
           <label>
             Nombre completo
-            <input type="text" class="input" required />
+            <input type="text" class="input" id="nameOf" required />
           </label>
           <label>
             Correo
-            <input type="mail" class="input" required />
-          </label>
-          <label>
-            Barrio
-            <input type="text" class="input" required />
+            <input type="mail" class="input" id="emailOf" required />
           </label>
           <label>
             Dirección
-            <input type="text" class="input" required />
-          </label>
-          <label>
-            Tipo de inmueble
-            <input type="text" class="input" required />
+            <input type="text" class="input" id="addressOf" required />
           </label>
           <label>
             Observaciones
             <textarea
               placeholder="EJEMPLO: Es la casa de la puerta roja!!!!"
               class="input"
-              required
+              maxlength="250"
+              id="notesOf"
               style="resize: vertical"
             ></textarea>
           </label>
-        </form>
-        <br /><br />
 
-        <form class="contact-form">
           <h3>Selecciona los productos y cantidades:</h3>
 
           <details open>
@@ -328,5 +318,6 @@
     </footer>
 
     <script src="main.js"></script>
+    <script type="module" src="./js/formOrder.js"></script>
   </body>
 </html>

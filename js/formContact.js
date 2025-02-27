@@ -6,7 +6,7 @@ import {
 
 const contactForm = document.querySelector("#contactForm");
 
-contactForm.addEventListener("submit", (e) => {
+contactForm.addEventListener("submit", function (e) {
   // Validate contact form before submitting to the backend
   e.preventDefault();
   let nameCf = document.querySelector("#nameContactForm");

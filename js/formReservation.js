@@ -7,7 +7,7 @@ import {
 
 const reservationForm = document.querySelector("#reservationForm");
 
-reservationForm.addEventListener("submit", (e) => {
+reservationForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
   let dateRf = document.querySelector("#dateReservationForm");
