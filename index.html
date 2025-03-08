@@ -1,210 +1,223 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/6b05a0a1ef.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&family=Ultra&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="shortcut icon"
-      href="assets/logos/logo-pizza-removebg-preview.png"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>La Napolitana</title>
-  </head>
-  <body>
-    <header class="header">
-      <a href="#" class="logo">
-        <img
-          src="assets/logos/logo-pizza-removebg-preview.png"
-          class="logo-img"
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            src="https://kit.fontawesome.com/6b05a0a1ef.js"
+            crossorigin="anonymous"
+        ></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         />
-        <h1 class="logo-title">La Napolitana</h1>
-      </a>
-
-      <button class="toggle-btn" id="toggleBtn">
-        <i class="fa-solid fa-bars" id="toggleBars"></i>
-        <i class="fa-solid fa-xmark hidden" id="toggleX"></i>
-      </button>
-
-      <nav class="menu hidden" id="menu">
-        <ul>
-          <li><a href="menu.html">MENÚ</a></li>
-          <li><a href="reservas.html">RESERVAS</a></li>
-          <li><a href="pideenlinea.html">PIDE EN LÍNEA</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <main class="main">
-      <section>
-        <h2>¡Empieza tu pedido!</h2>
-        <a href="pideenlinea.html" class="btn">Pide en línea</a>
-      </section>
-
-      <section>
-        <h2>Prueba nuestras deliciosas pizzas</h2>
-        <img
-          src="https://cdn.pixabay.com/photo/2017/12/10/14/47/pizza-3010062_960_720.jpg"
-          class="image"
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&family=Ultra&display=swap"
+            rel="stylesheet"
         />
-        <p>
-          Deleitate con la especialidad de la casa, Pizza margarita por solo
-          <b>$25.000</b> ✨
-        </p>
-        <br /><br />
-        <img
-          src="https://static01.nyt.com/images/2021/02/14/dining/carbonara-horizontal/carbonara-horizontal-threeByTwoMediumAt2X-v2.jpg"
-          alt=""
-          srcset=""
-          class="image"
+        <link
+            rel="shortcut icon"
+            href="assets/logos/logo-pizza-removebg-preview.png"
+            type="image/x-icon"
         />
-        <p>¿Ya probaste el spaguetti Carbonara? 🔥</p>
-      </section>
+        <link rel="stylesheet" href="style.css" />
+        <title>La Napolitana</title>
+    </head>
+    <body>
+        <header class="header">
+            <a href="#" class="logo">
+                <img
+                    src="assets/logos/logo-pizza-removebg-preview.png"
+                    class="logo-img"
+                />
+                <h1 class="logo-title">La Napolitana</h1>
+            </a>
 
-      <section class="location">
-        <h2 class="centered-title">Ubicación en el mapa</h2>
-        <p>¡Visítanos en nuestra tienda física!</p>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d254489.9074166939!2d-74.043599!3d4.699527!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9ab044b8cd83%3A0x41058a299343af21!2sLasagnas%20Napolitanas!5e0!3m2!1ses!2sco!4v1683170080534!5m2!1ses!2sco"
-          width="100%"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-        <p>📍 <i>Carrera 8 N° 95-13 Bogotá, Colombia</i></p>
-      </section>
+            <button class="toggle-btn" id="toggleBtn">
+                <i class="fa-solid fa-bars" id="toggleBars"></i>
+                <i class="fa-solid fa-xmark hidden" id="toggleX"></i>
+            </button>
 
-      <section class="social-media">
-        <h2 class="centered-title">Redes sociales</h2>
-        <div class="centered-title">
-          <a href="#" class="fa fa-facebook"></a>
-          <a href="#" class="fa fa-twitter"></a>
-          <a href="#" class="fa fa-youtube"></a>
-          <a href="#" class="fa fa-instagram"></a>
-          <a href="#" class="fa fa-pinterest"></a>
-          <a href="#" class="fa fa-android"></a>
-        </div>
-      </section>
+            <nav class="menu hidden" id="menu">
+                <ul>
+                    <li><a href="./menu.html">MENÚ</a></li>
+                    <li><a href="./reservations.html">RESERVAS</a></li>
+                    <li><a href="./order.html">PIDE EN LÍNEA</a></li>
+                </ul>
+            </nav>
+        </header>
 
-      <section class="about">
-        <h2 class="centered-title">¿Quiénes somos?</h2>
-        <p>
-          La historia del restaurante La Napolitana es una de esfuerzo,
-          dedicación y amor por la cocina. Desde sus inicios, la familia
-          propietaria ha trabajado arduamente para ofrecer a sus clientes una
-          experiencia gastronómica única y memorable. Cada plato que sale de su
-          cocina es preparado con ingredientes frescos y de la más alta calidad,
-          y con un toque especial que les da un sabor inigualable.
-        </p>
-        <p>
-          La Napolitana se enorgullece de combinar la tradición de la cocina
-          italiana con la riqueza y variedad de los ingredientes locales. En
-          cada uno de sus platillos se puede percibir la pasión y el cuidado que
-          ponen en cada detalle, lo que les ha ganado una gran cantidad de
-          seguidores y clientes fieles. Además, el restaurante cuenta con un
-          ambiente acogedor y familiar, donde todos son bienvenidos a disfrutar
-          de su comida y compañía.
-        </p>
-        <p>
-          Este restaurante ha logrado consolidarse como uno de los favoritos en
-          su comunidad, y sigue trabajando día a día para ofrecer la mejor
-          experiencia gastronómica posible a sus clientes.
-        </p>
-      </section>
+        <main class="main">
+            <section>
+                <h2>¡Empieza tu pedido!</h2>
+                <a href="pideenlinea.html" class="btn">Pide en línea</a>
+            </section>
 
-      <section class="opinions">
-        <h2 class="centered-title">Opiniones de nuestros comensales</h2>
-        <div class="testimonial">
-          <p>
-            "Me encantó La Napolitana, la comida es deliciosa y el ambiente es
-            muy acogedor. Sin duda volveré a visitarlos. "
-          </p>
-          <p><i>- Ana García </i></p>
-        </div>
-        <div class="testimonial">
-          <p>
-            "La atención en La Napolitana es excelente, te hacen sentir como en
-            casa. Además, la comida es una delicia, muy recomendado."
-          </p>
-          <p><i> - José Pérez</i></p>
-        </div>
-        <div class="testimonial">
-          <p>
-            "Fui a La Napolitana con mi familia y quedamos encantados con todo,
-            desde la comida hasta el servicio. Definitivamente es uno de
-            nuestros restaurantes favoritos."
-          </p>
-          <p><i> - Isabela Rodríguez</i></p>
-        </div>
-        <div class="testimonial">
-          <p>
-            "La pizza de La Napolitana es espectacular, definitivamente la mejor
-            que he probado. ¡Vale la pena visitarlos solo por ella!"
-          </p>
-          <p><i> - Luis González</i></p>
-        </div>
-      </section>
+            <section>
+                <h2>Prueba nuestras deliciosas pizzas</h2>
+                <img
+                    src="https://cdn.pixabay.com/photo/2017/12/10/14/47/pizza-3010062_960_720.jpg"
+                    class="image"
+                />
+                <p>
+                    Deleitate con la especialidad de la casa, Pizza margarita
+                    por solo
+                    <b>$25.000</b> ✨
+                </p>
+                <br /><br />
+                <img
+                    src="https://static01.nyt.com/images/2021/02/14/dining/carbonara-horizontal/carbonara-horizontal-threeByTwoMediumAt2X-v2.jpg"
+                    alt=""
+                    srcset=""
+                    class="image"
+                />
+                <p>¿Ya probaste el spaguetti Carbonara? 🔥</p>
+            </section>
 
-      <section class="contact">
-        <h2 class="centered-title">Contáctanos</h2>
-        <form class="contact-form" id="contactForm">
-          <label>
-            Nombre
-            <input
-              type="text"
-              class="input"
-              required
-              placeholder="Pepe Perez"
-              id="nameContactForm"
-            />
-          </label>
-          <label>
-            Correo
-            <input
-              type="email"
-              class="input"
-              required
-              placeholder="correo@ejemplo.com"
-              id="emailContactForm"
-            />
-          </label>
-          <label>
-            Mensaje
-            <textarea
-              placeholder="EJEMPLO: Me encantó la PIZZA!!!!"
-              class="input"
-              required
-              style="resize: vertical"
-              id="messageContactForm"
-            ></textarea>
-          </label>
-          <button type="submit" class="btn">Enviar</button>
-        </form>
-      </section>
-    </main>
+            <section class="location">
+                <h2 class="centered-title">Ubicación en el mapa</h2>
+                <p>¡Visítanos en nuestra tienda física!</p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d254489.9074166939!2d-74.043599!3d4.699527!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9ab044b8cd83%3A0x41058a299343af21!2sLasagnas%20Napolitanas!5e0!3m2!1ses!2sco!4v1683170080534!5m2!1ses!2sco"
+                    width="100%"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+                <p>📍 <i>Carrera 8 N° 95-13 Bogotá, Colombia</i></p>
+            </section>
 
-    <footer class="footer">
-      <p>Derechos reservados &copy; 2023</p>
+            <section class="social-media">
+                <h2 class="centered-title">Redes sociales</h2>
+                <div class="centered-title">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-pinterest"></a>
+                    <a href="#" class="fa fa-android"></a>
+                </div>
+            </section>
 
-      <p>Esta página web NO representa a un restaurante y/o empresa real</p>
-    </footer>
+            <section class="about">
+                <h2 class="centered-title">¿Quiénes somos?</h2>
+                <p>
+                    La historia del restaurante La Napolitana es una de
+                    esfuerzo, dedicación y amor por la cocina. Desde sus
+                    inicios, la familia propietaria ha trabajado arduamente para
+                    ofrecer a sus clientes una experiencia gastronómica única y
+                    memorable. Cada plato que sale de su cocina es preparado con
+                    ingredientes frescos y de la más alta calidad, y con un
+                    toque especial que les da un sabor inigualable.
+                </p>
+                <p>
+                    La Napolitana se enorgullece de combinar la tradición de la
+                    cocina italiana con la riqueza y variedad de los
+                    ingredientes locales. En cada uno de sus platillos se puede
+                    percibir la pasión y el cuidado que ponen en cada detalle,
+                    lo que les ha ganado una gran cantidad de seguidores y
+                    clientes fieles. Además, el restaurante cuenta con un
+                    ambiente acogedor y familiar, donde todos son bienvenidos a
+                    disfrutar de su comida y compañía.
+                </p>
+                <p>
+                    Este restaurante ha logrado consolidarse como uno de los
+                    favoritos en su comunidad, y sigue trabajando día a día para
+                    ofrecer la mejor experiencia gastronómica posible a sus
+                    clientes.
+                </p>
+            </section>
 
-    <script src="./main.js"></script>
-    <script type="module" src="./js/formContact.js"></script>
-  </body>
+            <section class="opinions">
+                <h2 class="centered-title">Opiniones de nuestros comensales</h2>
+                <div class="testimonial">
+                    <p>
+                        "Me encantó La Napolitana, la comida es deliciosa y el
+                        ambiente es muy acogedor. Sin duda volveré a visitarlos.
+                        "
+                    </p>
+                    <p><i>- Ana García </i></p>
+                </div>
+                <div class="testimonial">
+                    <p>
+                        "La atención en La Napolitana es excelente, te hacen
+                        sentir como en casa. Además, la comida es una delicia,
+                        muy recomendado."
+                    </p>
+                    <p><i> - José Pérez</i></p>
+                </div>
+                <div class="testimonial">
+                    <p>
+                        "Fui a La Napolitana con mi familia y quedamos
+                        encantados con todo, desde la comida hasta el servicio.
+                        Definitivamente es uno de nuestros restaurantes
+                        favoritos."
+                    </p>
+                    <p><i> - Isabela Rodríguez</i></p>
+                </div>
+                <div class="testimonial">
+                    <p>
+                        "La pizza de La Napolitana es espectacular,
+                        definitivamente la mejor que he probado. ¡Vale la pena
+                        visitarlos solo por ella!"
+                    </p>
+                    <p><i> - Luis González</i></p>
+                </div>
+            </section>
+
+            <section class="contact">
+                <h2 class="centered-title">Contáctanos</h2>
+                <form class="contact-form" id="contactForm">
+                    <label>
+                        Nombre
+                        <input
+                            type="text"
+                            class="input"
+                            required
+                            placeholder="Pepe Perez"
+                            name="full_name"
+                            id="full_name"
+                        />
+                    </label>
+                    <label>
+                        Correo
+                        <input
+                            type="email"
+                            class="input"
+                            required
+                            placeholder="correo@ejemplo.com"
+                            name="email"
+                            id="email"
+                        />
+                    </label>
+                    <label>
+                        Mensaje
+                        <textarea
+                            placeholder="EJEMPLO: Me encantó la PIZZA!!!!"
+                            class="input"
+                            required
+                            style="resize: vertical"
+                            name="message"
+                            id="message"
+                        ></textarea>
+                    </label>
+                    <button type="submit" class="btn">Enviar</button>
+                </form>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Derechos reservados &copy; 2023</p>
+
+            <p>
+                Esta página web NO representa a un restaurante y/o empresa real
+            </p>
+        </footer>
+
+        <script src="./js/main.js"></script>
+        <script type="module" src="./js/formContact.js"></script>
+    </body>
 </html>

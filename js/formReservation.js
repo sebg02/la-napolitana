@@ -1,58 +1,85 @@
 import {
-  isEmailInvalid,
-  isFieldEmpty,
-  isNameInvalid,
-  isPhoneNumberInvalid,
+    isEmailValid,
+    isFieldEmpty,
+    isNameValid,
+    isPhoneNumberValid,
 } from "./formValidators.js";
 
 const reservationForm = document.querySelector("#reservationForm");
 
 reservationForm.addEventListener("submit", function (e) {
-  e.preventDefault();
+    e.preventDefault();
 
-  let dateRf = document.querySelector("#dateReservationForm");
-  let timeRf = document.querySelector("#timeReservationForm");
-  let sizeGroupRf = document.querySelector("#sizeGroupReservationForm");
-  let nameRf = document.querySelector("#nameReservationForm");
-  let emailRf = document.querySelector("#emailReservationForm");
-  let phoneNumberRf = document.querySelector("#phoneNumberReservationForm");
-  let notesRf = document.querySelector("#notesReservationForm");
+    let dateRf = document.querySelector("#dateReservationForm");
+    let timeRf = document.querySelector("#timeReservationForm");
+    let sizeGroupRf = document.querySelector("#sizeGroupReservationForm");
+    let nameRf = document.querySelector("#nameReservationForm");
+    let emailRf = document.querySelector("#emailReservationForm");
+    let phoneNumberRf = document.querySelector("#phoneNumberReservationForm");
+    let notesRf = document.querySelector("#notesReservationForm");
 
-  let isValid = true;
+    const formData = new FormData(reservationForm);
 
-  if (isNameInvalid(nameRf.value)) {
-    alert("Por favor ingrese un nombre válido.");
-    isValid = false;
-  }
+    let date = formData.get("date");
+    let time = formData.get("time");
+    let sizeGroup = Number(formData.get("size_group"));
+    let name = formData.get("name").trim().toLowerCase();
+    let email = formData.get("email").trim().toLowerCase();
+    let phone = formData.get("phone").trim();
+    let notes = formData.get("notes").trim();
 
-  if (isEmailInvalid(emailRf.value)) {
-    alert("Por favor ingrese un correo válido.");
-    isValid = false;
-  }
+    let isValid = true;
 
-  if (isPhoneNumberInvalid(phoneNumberRf.value)) {
-    alert("Por favor ingrese un teléfono válido.");
-    isValid = false;
-  }
+    if (!isNameValid(name)) {
+        alert("Por favor ingrese un nombre válido.");
+        isValid = false;
+    }
 
-  if (sizeGroupRf.value === "") {
-    alert("Por favor ingrese un tamaño de grupo válido.");
-    isValid = false;
-  }
+    if (!isEmailValid(email)) {
+        alert("Por favor ingrese un correo válido.");
+        isValid = false;
+    }
 
-  if (isValid) {
-    alert("Solicitud de reservación realizada.");
-    // Quitar esto después
-    console.log(
-      dateRf.value,
-      timeRf.value,
-      sizeGroupRf.value,
-      nameRf.value,
-      emailRf.value,
-      phoneNumberRf.value,
-      notesRf.value
-    );
+    if (!isPhoneNumberValid(phone)) {
+        alert("Por favor ingrese un teléfono válido.");
+        isValid = false;
+    }
 
-    // this.submit()
-  }
+    if (sizeGroup === "" || sizeGroup < 0) {
+        alert("Por favor ingrese un tamaño de grupo válido.");
+        isValid = false;
+    }
+
+    if (isValid) {
+        const data = {
+            date: date,
+            time: time + ":00",
+            size_group: sizeGroup,
+            name: name,
+            email: email,
+            phone: phone,
+            notes: notes,
+        };
+
+        //
+
+        fetch("http://127.0.0.1:8000/api/reservation/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        })
+            .then((response) => response.json())
+            .then((result) => console.log("Respuesta del servidor:", result))
+            .catch((error) => console.error("Error:", error));
+
+        //
+
+        reservationForm.reset();
+        // Y llevarlo al inicio de la página o a home
+
+        alert("¡Solicitud de reservación realizada!");
+        console.log(data);
+    }
 });
