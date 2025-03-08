@@ -4,6 +4,8 @@ import {
     isNameValid,
     isPhoneNumberValid,
 } from "./formValidators.js";
+import { setBtnLoadingView, setBtnOriginalView } from "./miscellaneus.js";
+import { sendData } from "./sendData.js";
 
 const reservationForm = document.querySelector("#reservationForm");
 
@@ -61,25 +63,23 @@ reservationForm.addEventListener("submit", function (e) {
             notes: notes,
         };
 
-        //
+        const btnSubmit = document.getElementById("btnSubmitReservationsForm");
+        const btnSubmitOriginalText = btnSubmit.textContent;
 
-        fetch("http://127.0.0.1:8000/api/reservation/", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(data),
-        })
-            .then((response) => response.json())
-            .then((result) => console.log("Respuesta del servidor:", result))
-            .catch((error) => console.error("Error:", error));
+        const url = "http://127.0.0.1:8000/api/reservation/";
 
-        //
+        setBtnLoadingView(btnSubmit);
+        sendData(url, data).then((success) => {
+            if (success) {
+                alert("¡Solicitud de reservación realizada!");
+                reservationForm.reset();
+            } else {
+                alert("Error al realizar la reservación");
+            }
+            setBtnLoadingView(btnSubmit, btnSubmitOriginalText);
+        });
 
-        reservationForm.reset();
-        // Y llevarlo al inicio de la página o a home
-
-        alert("¡Solicitud de reservación realizada!");
+        // quitar
         console.log(data);
     }
 });

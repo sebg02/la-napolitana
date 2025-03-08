@@ -1,4 +1,6 @@
 import { isEmailValid, isFieldEmpty, isNameValid } from "./formValidators.js";
+import { sendData } from "./sendData.js";
+import { setBtnLoadingView, setBtnOriginalView } from "./miscellaneus.js";
 
 const orderForm = document.querySelector("#orderForm");
 
@@ -60,9 +62,23 @@ orderForm.addEventListener("submit", function (e) {
             }
         });
 
-        orderForm.reset();
+        const btnSubmit = document.getElementById("btnSubmitOrderForm");
+        const btnSubmitOriginalText = btnSubmit.textContent;
 
-        alert("¡Solicitud de pedido en línea realizada!");
+        const url = "http://127.0.0.1:8000/api/order/";
+
+        setBtnLoadingView(btnSubmit);
+        sendData(url, data).then((success) => {
+            if (success) {
+                alert("¡Solicitud de pedido en línea realizada!");
+                orderForm.reset();
+            } else {
+                alert("Error al realizar la solicitud de pedido");
+            }
+            setBtnOriginalView(btnSubmit, btnSubmitOriginalText);
+        });
+
+        // quitar
         console.log(data);
     }
 });

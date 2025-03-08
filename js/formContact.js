@@ -5,6 +5,9 @@ import {
     hasAtLeast10Char,
 } from "./formValidators.js";
 
+import { setBtnLoadingView, setBtnOriginalView } from "./miscellaneus.js";
+import { sendData } from "./sendData.js";
+
 const contactForm = document.querySelector("#contactForm");
 
 contactForm.addEventListener("submit", function (e) {
@@ -42,24 +45,23 @@ contactForm.addEventListener("submit", function (e) {
             message: message,
         };
 
-        //
-        fetch("http://127.0.0.1:8000/api/contact/", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(data),
-        })
-            .then((response) => response.json())
-            .then((result) => console.log("Respuesta del servidor:", result))
-            .catch((error) => console.error("Error:", error));
+        const btnSubmit = document.getElementById("btnSubmitContactForm");
+        const btnSubmitOriginalText = btnSubmit.textContent;
 
-        //
+        const url = "http://127.0.0.1:8000/api/contact/";
 
-        contactForm.reset();
-        // Y llevarlo al inicio de la página o a home
+        setBtnLoadingView(btnSubmit);
+        sendData(url, data).then((success) => {
+            if (success) {
+                alert("¡Mensaje enviado!");
+                contactForm.reset();
+            } else {
+                alert("Error al enviar el mensaje.");
+            }
+            setBtnOriginalView(btnSubmit, btnSubmitOriginalText);
+        });
 
-        alert("¡Mensaje enviado!");
+        // quitar
         console.log(data);
     }
 });
