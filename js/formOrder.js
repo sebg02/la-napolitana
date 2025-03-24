@@ -63,22 +63,21 @@ orderForm.addEventListener("submit", function (e) {
         });
 
         const btnSubmit = document.getElementById("btnSubmitOrderForm");
-        const btnSubmitOriginalText = btnSubmit.textContent;
+        const btnSubmitOriginalText = btnSubmit.textContent.trim();
 
-        const url = "http://127.0.0.1:8000/api/order/";
+        // const url = "http://127.0.0.1:8000/api/order/";
+        const url = "https://la-napolitana-backend.onrender.com/api/order/";
 
         setBtnLoadingView(btnSubmit);
         sendData(url, data).then((success) => {
             if (success) {
                 alert("¡Solicitud de pedido en línea realizada!");
                 orderForm.reset();
+                location.reload();
             } else {
                 alert("Error al realizar la solicitud de pedido");
             }
             setBtnOriginalView(btnSubmit, btnSubmitOriginalText);
         });
-
-        // quitar
-        console.log(data);
     }
 });

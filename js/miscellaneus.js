@@ -1,4 +1,4 @@
-// Agregar funcionalidad para cambiar botón de color y estado mietnras envía
+// Agregar funcionalidad para cambiar botón de color y estado mientras envía
 
 export function setBtnLoadingView(btnElement) {
     btnElement.disabled = true;

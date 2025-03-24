@@ -12,14 +12,6 @@ const reservationForm = document.querySelector("#reservationForm");
 reservationForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    let dateRf = document.querySelector("#dateReservationForm");
-    let timeRf = document.querySelector("#timeReservationForm");
-    let sizeGroupRf = document.querySelector("#sizeGroupReservationForm");
-    let nameRf = document.querySelector("#nameReservationForm");
-    let emailRf = document.querySelector("#emailReservationForm");
-    let phoneNumberRf = document.querySelector("#phoneNumberReservationForm");
-    let notesRf = document.querySelector("#notesReservationForm");
-
     const formData = new FormData(reservationForm);
 
     let date = formData.get("date");
@@ -64,9 +56,14 @@ reservationForm.addEventListener("submit", function (e) {
         };
 
         const btnSubmit = document.getElementById("btnSubmitReservationsForm");
-        const btnSubmitOriginalText = btnSubmit.textContent;
+        const btnSubmitOriginalText = btnSubmit.textContent.trim();
 
-        const url = "http://127.0.0.1:8000/api/reservation/";
+        /**
+         * CAMBIAR u OFUSCAR?
+         */
+        // const url = "http://127.0.0.1:8000/api/reservation/";
+        const url =
+            "https://la-napolitana-backend.onrender.com/api/reservation/";
 
         setBtnLoadingView(btnSubmit);
         sendData(url, data).then((success) => {
@@ -76,10 +73,9 @@ reservationForm.addEventListener("submit", function (e) {
             } else {
                 alert("Error al realizar la reservación");
             }
-            setBtnLoadingView(btnSubmit, btnSubmitOriginalText);
-        });
+            console.log(btnSubmitOriginalText);
 
-        // quitar
-        console.log(data);
+            setBtnOriginalView(btnSubmit, btnSubmitOriginalText);
+        });
     }
 });

@@ -46,9 +46,10 @@ contactForm.addEventListener("submit", function (e) {
         };
 
         const btnSubmit = document.getElementById("btnSubmitContactForm");
-        const btnSubmitOriginalText = btnSubmit.textContent;
+        const btnSubmitOriginalText = btnSubmit.textContent.trim();
 
-        const url = "http://127.0.0.1:8000/api/contact/";
+        // const url = "http://127.0.0.1:8000/api/contact/";
+        const url = "https://la-napolitana-backend.onrender.com/api/contact/";
 
         setBtnLoadingView(btnSubmit);
         sendData(url, data).then((success) => {
@@ -60,8 +61,5 @@ contactForm.addEventListener("submit", function (e) {
             }
             setBtnOriginalView(btnSubmit, btnSubmitOriginalText);
         });
-
-        // quitar
-        console.log(data);
     }
 });
