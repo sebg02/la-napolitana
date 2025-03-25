@@ -73,7 +73,6 @@ reservationForm.addEventListener("submit", function (e) {
             } else {
                 alert("Error al realizar la reservación");
             }
-            console.log(btnSubmitOriginalText);
 
             setBtnOriginalView(btnSubmit, btnSubmitOriginalText);
         });
